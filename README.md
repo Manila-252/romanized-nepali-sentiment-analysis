@@ -2,9 +2,11 @@ This project explores fine-tuning large language models for sentiment classifica
 
 The dataset used was amirpoudel/nepal-romanized-restaurant-reviews from Hugging Face, which contains Romanized Nepali restaurant reviews labeled with three sentiment classes: positive, neutral, and negative.
 
-Due to the 16GB VRAM limitation of Google Colab GPUs, full fine-tuning of LLaMA 2 was not feasible. Even with LoRA and QLoRA, the LLaMA-2-7B-Chat model consistently ran into out-of-memory (OOM) issues on both the free and Pro versions of Google Colab. This led to further research into smaller, more resource-efficient models suitable for sequence classification tasks.
+The initial approach used LLaMA-2-7B-Chat with parameter-efficient fine-tuning methods, including LoRA and QLoRA. However, the model could not be loaded into GPU memory on Google Colab with 16 GB of VRAM, even when using 4-bit quantization.
 
-As a result, the project pivoted to distilbert-base-uncased, a lightweight, distilled version of BERT optimized for sentence-level tasks such as sentiment analysis. DistilBERT significantly reduced memory requirements while maintaining strong performance, making it well-suited for fine-tuning on the available hardware.
+Because the out-of-memory error occurred during model loading, training and evaluation could not begin. This showed that, under the available hardware constraints, LLaMA 2 was not a practical choice for this task.
+
+The project therefore shifted to distilbert-base-uncased, which has substantially lower memory requirements and is better suited to sentence-level classification.
 
 The final implementation successfully fine-tunes DistilBERT for sentiment classification of Romanized Nepali text, demonstrating an effective trade-off between model size, performance, and hardware constraints.
 
