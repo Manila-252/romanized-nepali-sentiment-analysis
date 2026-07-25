@@ -25,6 +25,15 @@ The final model achieved approximately **82.8% test accuracy**, demonstrating th
 - Investigated transfer learning for a low-resource language with informal transliterated text.
 
 ---
+## Results Snapshot
+
+| Metric | Value |
+|---------|-------:|
+| Model | DistilBERT Base Uncased |
+| Dataset | 607 Romanized Nepali Reviews |
+| Task | 3-Class Sentiment Classification |
+| Test Accuracy | **82.79%** |
+| Framework | Hugging Face + PyTorch |
 
 # Research Motivation
 
