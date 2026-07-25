@@ -34,6 +34,17 @@ The final model achieved approximately **82.8% test accuracy**, demonstrating th
 | Task | 3-Class Sentiment Classification |
 | Test Accuracy | **82.79%** |
 | Framework | Hugging Face + PyTorch |
+# Example Predictions
+
+The fine-tuned model can classify new Romanized Nepali restaurant reviews into positive, neutral, or negative sentiment categories.
+
+| Romanized Nepali Review | Predicted Sentiment |
+|---|---|
+| `khana ekdam mitho thiyo ra service pani ramro thiyo` | Positive |
+| `khana thikai thiyo tara kehi khas lagena` | Neutral |
+| `service dherai naramro thiyo ra khana pani chiso thiyo` | Negative |
+
+These examples illustrate how the model converts informal Romanized Nepali text into sentiment predictions.
 
 # Research Motivation
 
